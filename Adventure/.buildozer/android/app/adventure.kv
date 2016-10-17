@@ -1,0 +1,179 @@
+<Mechanics>:
+    Image:
+        source: './Scene/Background/background.png'
+        allow_stretch: True
+        keep_ratio: False
+        pos: self.pos
+        size: root.height*(16/9.), root.height
+
+    Image:
+        id: farground1
+        source: './Scene/Background/blimp.png'
+        allow_stretch: True
+        keep_ratio: False
+        pos: self.pos
+        size: root.height*(16/9.)*1.2, root.height*1.2
+
+    Image:
+        id: farground2
+        source: './Scene/Background/blimp.png'
+        allow_stretch: True
+        keep_ratio: False
+        pos: self.pos
+        size: root.height*(16/9.)*1.2, root.height*1.2
+
+    Image:
+        id: midground21
+        source: './Scene/Background/midground1.png'
+        allow_stretch: True
+        keep_ratio: False
+        pos: self.pos
+        size: root.height*(16/9.)*1.2, root.height*1.2
+
+    Image:
+        id: midground22
+        source: './Scene/Background/midground1.png'
+        allow_stretch: True
+        keep_ratio: False
+        pos: self.pos
+        size: root.height*(16/9.)*1.2, root.height*1.2
+
+    Image:
+        id: midground11
+        source: './Scene/Background/midground.png'
+        allow_stretch: True
+        keep_ratio: False
+        pos: self.pos
+        size: root.height*(16/9.)*1.2, root.height*1.2
+
+    Image:
+        id: midground12
+        source: './Scene/Background/midground.png'
+        allow_stretch: True
+        keep_ratio: False
+        pos: self.pos
+        size: root.height*(16/9.)*1.2, root.height*1.2
+
+    Image:
+        id: foreground_current
+        source: './Scene/foreground_nothing/Image.png'
+        allow_stretch: True
+        keep_ratio: False
+        pos: self.pos
+        size: root.height*(16/9.)*1.2, root.height*1.2
+    Image:
+        id: foreground_right
+        source: './Scene/foreground_nothing/Image.png'
+        allow_stretch: True
+        keep_ratio: False
+        pos: self.pos
+        size: root.height*(16/9.)*1.2, root.height*1.2
+    Image:
+        id: foreground_top
+        source: './Scene/foreground_nothing/Image.png'
+        allow_stretch: True
+        keep_ratio: False
+        pos: self.pos
+        size: root.height*(16/9.)*1.2, root.height*1.2
+
+    Image:
+        id: foreground_diag
+        source: './Scene/foreground_nothing/Image.png'
+        allow_stretch: True
+        keep_ratio: False
+        pos: self.pos
+        size: root.height*(16/9.)*1.2, root.height*1.2
+
+
+    Button:
+        id: widget_current
+        background_normal: self.background_normal
+        background_down: self.background_down
+        allow_stretch: False
+        keep_ratio: True
+        pos: self.pos
+        size: root.height*0.5, root.height*0.65
+        on_press: root.Widget_Button_Current()
+
+    Button:
+        background_normal: self.background_normal
+        background_down: self.background_down
+        id: widget_right
+        source: self.source
+        allow_stretch: False
+        keep_ratio: True
+        pos: self.pos
+        size: root.height*0.5, root.height*0.65
+        on_press: root.Widget_Button_Right()
+
+
+    Button:
+        background_normal: self.background_normal
+        background_down: self.background_down
+        id: widget_top
+        source: self.source
+        allow_stretch: False
+        keep_ratio: True
+        pos: self.pos
+        size: root.height*0.5, root.height*0.65
+        on_press: root.Widget_Button_Top()
+
+    Button:
+        background_normal: self.background_normal
+        background_down: self.background_down
+        id: widget_diag
+        background_normal: self.background_normal
+        allow_stretch: False
+        keep_ratio: True
+        pos: self.pos
+        size: root.height*0.5, root.height*0.65
+        on_press: root.Widget_Button_Diag()
+
+
+    Image:
+        id: Character
+        source: './WidgetImages/hero_right.png'
+        allow_stretch: True
+        keep_ratio: False
+        pos: self.pos
+        size: root.height*0.1, root.height*0.075
+
+    Button:
+        background_normal: './WidgetImages/JumpButton.png'
+        background_down: './WidgetImages/JumpButton.png'
+        allow_stretch: True
+        keep_ratio: False
+        size_hint_y: None
+        size_hint_x: None
+        size: root.width*0.2, root.height*0.15
+        pos:root.width-root.width*0.2, 0
+        on_press:root.Jump()
+
+    Button:
+        background_normal: './WidgetImages/LeftRightButton.png'
+        background_down:'./WidgetImages/LeftRightButton.png'
+        size_hint_y: None
+        size_hint_x: None
+        size: root.width*0.15, root.height*0.15
+        pos:root.width*0.15, 0
+        on_press:root.Right()
+        on_release: root.Stop()
+
+    Button:
+        background_normal: './WidgetImages/LeftRightButton.png'
+        background_down: './WidgetImages/LeftRightButton.png'
+        size_hint_y: None
+        size_hint_x: None
+        size: root.width*0.15, root.height*0.15
+        pos: 0, 0
+        on_press:root.Left()
+        on_release: root.Stop()
+
+    Button:
+        background_normal: './WidgetImages/house.png'
+        background_down: './WidgetImages/house.png'
+        size_hint_y: None
+        size_hint_x: None
+        size: root.width*0.1, root.height*0.1
+        pos: root.width*0.45, 0
+        on_release: root.Home()

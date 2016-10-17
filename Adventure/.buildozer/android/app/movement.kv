@@ -1,0 +1,87 @@
+#: import random random
+
+<stuff_moving>:
+    orientation: 'vertical'
+
+    Button:
+        on_press: root.Restart()
+        text: 'New Game'
+        font_size: root.height*0.14
+        size_hint_y: None
+        height: root.height*0.15
+        background_color: 0,0,0,0
+    Button:
+        size: self.size
+        on_press: root.Pressed()
+        background_color: 0,0,0,0
+        Label:
+            pos: root.width*0.4, (root.height - root.height*0.15 - self.height*1.5)
+            font_size: root.height*0.08
+            id: Out_Score
+            text: self.text
+            color: 0, 0, 1, 1
+
+        SmallBox:
+            id: Box1
+            size: root.width*0.02, root.width*0.02
+            pos: self.pos
+        SmallBox:
+            id: Box2
+            size: root.width*0.02, root.width*0.02
+            pos: self.pos
+        SmallBox:
+            id: Box3
+            size: root.width*0.02, root.width*0.02
+            pos: self.pos
+        SmallBox:
+            id: Box4
+            size: root.width*0.02, root.width*0.02
+            pos: self.pos
+        SmallBox:
+            id: Box5
+            size: root.width*0.02, root.width*0.02
+            pos: self.pos
+        SmallBox:
+            id: Box6
+            size: root.width*0.02, root.width*0.02
+            pos: self.pos
+        SmallBox:
+            id: Box7
+            size: root.width*0.02, root.width*0.02
+            pos: self.pos
+        SmallBox:
+            id: Box8
+            size: root.width*0.02, root.width*0.02
+            pos: self.pos
+
+        FloatLayout:
+            id: Jump
+            pos: root.width/5, 0
+            size: root.width*0.1, root.width*0.1
+            canvas.after:
+                Color:
+                    rgba: 0,0,1,1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+        FloatLayout:
+            id: Attack
+            pos: self.pos
+            size: root.width*0.2, root.width*0.2
+            canvas.after:
+                Color: 
+                    rgba: 1,0,0,1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+
+#############################################################################
+<SmallBox>:
+    canvas.after:
+        Color:
+            rgba: 1,0,0,1
+        Rectangle:
+            pos: self.pos
+            size: self.size

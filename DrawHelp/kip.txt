@@ -1,0 +1,6 @@
+(Window.height*(16/9.)*57/90,Window.height*61/90)
+(Window.height*(16/9.)*57/90,Window.height*61/90)
+(Window.height*(16/9.)*56/90,Window.height*46/90)
+(Window.height*(16/9.)*46/90,Window.height*52/90)
+(Window.height*(16/9.)*24/90,Window.height*38/90)
+(Window.height*(16/9.)*25/90,Window.height*23/90)

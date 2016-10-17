@@ -1,0 +1,3 @@
+x0y0 nothing
+x1y1 house
+x2y1 fox1
